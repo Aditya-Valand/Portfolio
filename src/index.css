@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@layer theme {
+  :root {
+    --font-roboto: 'Roboto', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+  }
+}
+
+/* Base styles */
+@layer base {
+  body {
+    background-color: black;
+    color: white;
+    font-family: var(--font-roboto);
+  }
+}
+
+/* Utility classes for fonts */
+@layer utilities {
+  .font-roboto {
+    font-family: var(--font-roboto);
+  }
+  
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+}
