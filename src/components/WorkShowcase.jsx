@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github, Monitor, Zap, Code, Pa
 import { motion, AnimatePresence } from "framer-motion"
 import image1 from "../assets/images/citysports.png"
 import pureinsight from "../assets/images/pureinsight1.png"
-import image2 from "../assets/images/image.png"
+import image2 from "../assets/images/imagess.png"
 import image3 from "../assets/images/image3.png"
 import image4 from "../assets/images/image4.png"
 import image5 from "../assets/images/image5.png"
