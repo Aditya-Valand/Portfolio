@@ -110,7 +110,24 @@ function Navbar() {
           {/* CTA Button - Desktop */}
           <div className="hidden md:flex font-heading items-center">
             <button
-              onClick={() => handleNavClick({  name: "Contact", id: "Contact" })}
+              onClick={() => {
+                
+                const element = document.getElementById('contactme');
+               
+                if (element) {
+                  // Try using getBoundingClientRect for more accurate positioning
+                  const rect = element.getBoundingClientRect();
+                  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                  const elementTop = rect.top + scrollTop;
+                  const navbarHeight = 80;
+                  
+                  window.scrollTo({ 
+                    top: elementTop - navbarHeight, 
+                    behavior: 'smooth' 
+                  });
+                }
+                setIsMobileMenuOpen(false);
+              }}
               className="bg-red-500 hover:bg-red-600 text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 active:scale-95"
             >
               Let's talk
@@ -144,8 +161,8 @@ function Navbar() {
         <div className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-xl transition-all duration-500 ease-in-out mobile-menu-container ${
           isMobileMenuOpen 
             ? 'opacity-100 visible' 
-            : 'opacity-0 invisible pointer-events-none'
-        }`} style={{ top: '0px' }}>
+            : 'opacity-0 invisible '
+        }`} style={{ top: isScrolled ? '80px' : '80px', position: 'fixed' }}>
           <div className="flex flex-col items-center justify-center h-full space-y-8 px-8 pt-20">
             {navItems.map((item, index) => (
               <button
@@ -166,7 +183,24 @@ function Navbar() {
             ))}
             
             <button
-              onClick={() => handleNavClick({ id: 'contact' })}
+              onClick={() => {
+                
+                const element = document.getElementById('contactme');
+                
+                if (element) {
+                  // Try using getBoundingClientRect for more accurate positioning
+                  const rect = element.getBoundingClientRect();
+                  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                  const elementTop = rect.top + scrollTop;
+                  const navbarHeight = 80;
+                  
+                  window.scrollTo({ 
+                    top: elementTop - navbarHeight, 
+                    behavior: 'smooth' 
+                  });
+                }
+                setIsMobileMenuOpen(false);
+              }}
               className={`bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 active:scale-95 ${
                 isMobileMenuOpen 
                   ? 'translate-y-0 opacity-100' 

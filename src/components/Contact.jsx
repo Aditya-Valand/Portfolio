@@ -62,7 +62,7 @@ const Contact = () => {
   }
 
   return (
-    <div id="Contact" className="relative min-h-screen bg-transparent py-10 sm:py-20 px-4 sm:px-6 overflow-hidden">
+    <section id="contactme" className="relative min-h-screen bg-transparent py-10 sm:py-20 px-4 sm:px-6 overflow-hidden">
       {/* Background Elements */}
       
 
@@ -193,7 +193,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
