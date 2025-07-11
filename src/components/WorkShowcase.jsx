@@ -313,6 +313,7 @@ const WorkShowcase = () => {
               <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
                 <motion.a
                   href={projects[currentProject].liveUrl}
+                  target="_blank"
                   className="flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-3 rounded-full transition-all duration-300 group w-full sm:w-auto"
                   whileHover={{
                     scale: 1.05,
@@ -326,6 +327,7 @@ const WorkShowcase = () => {
 
                 <motion.a
                   href={projects[currentProject].githubUrl}
+                  target="_blank"
                   className="flex items-center justify-center space-x-2 bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/30 text-white px-4 sm:px-6 py-3 rounded-full transition-all duration-300 group w-full sm:w-auto"
                   whileHover={{
                     scale: 1.05,
